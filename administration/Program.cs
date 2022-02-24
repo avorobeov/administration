@@ -16,7 +16,7 @@ namespace administration
 
             database.ShowListCriminals();
             
-            database.AmnestyCriminal(crime);
+            database.AmnestyCriminals(crime);
            
             database.ShowListCriminals();
 
@@ -58,7 +58,7 @@ namespace administration
             _criminals.Add(new Criminal("Антонов", "Николай", "Матвеевич", "Разбой"));
         }
 
-        public void AmnestyCriminal(string crime)
+        public void AmnestyCriminals(string crime)
         {
             _criminals = _criminals.Where(criminal => criminal.Crime != crime).ToList();
         }
